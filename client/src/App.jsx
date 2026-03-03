@@ -732,7 +732,7 @@ export default function App() {
               {/* Left — bio */}
               <div className="space-y-5">
                 <p className="text-gray-400 text-[0.92rem] leading-[1.9]">
-                  I'm <strong className="text-white font-medium">Murali Krishna Danda</strong>, a 2nd-year Computer Science undergraduate at Anil Neerukonda Institute of Technology and Sciences, Visakhapatnam. I'm a <strong className="text-white font-medium">Reliance Foundation Scholar (₹2L)</strong> — awarded for academic excellence and leadership potential.
+                  I'm <strong className="text-white font-medium">Murali Krishna Danda</strong>, a 3rd-year Computer Science undergraduate at Anil Neerukonda Institute of Technology and Sciences, Visakhapatnam. I'm a <strong className="text-white font-medium">Reliance Foundation Scholar (₹2L)</strong> — awarded for academic excellence and leadership potential.
                 </p>
                 <p className="text-gray-400 text-[0.92rem] leading-[1.9]">
                   I work at the intersection of <strong className="text-white font-medium">full-stack engineering and applied AI</strong> — shipping MERN applications, real-time computer vision systems, and NLP-powered tools. Across <strong className="text-white font-medium">4 internships</strong>, I've contributed to production codebases and collaborated in Agile teams.
