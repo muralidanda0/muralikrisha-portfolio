@@ -32,149 +32,68 @@ function useFadeRole(words, intervalMs = 2800) {
    DATA
 ───────────────────────────────────────── */
 const PROJECTS = [
-  // ── DONE ──
   {
-    title: "AI-Powered Real-Time Malpractice Detection",
-    badge: "⭐ SIH — Institute Selected",
-    badgeColor: "text-amber-400 bg-amber-400/10 border-amber-400/30",
-    desc: "Fully offline computer vision system that detects exam malpractice in real time using YOLOv8, OpenCV, and MediaPipe. Generates evidence-based PDF reports and real-time alerts — zero internet dependency.",
-    tech: ["Python", "YOLOv8", "OpenCV", "MediaPipe", "Offline Deploy"],
-    impact: [{ num: "65%", label: "Malpractice Reduction" }, { num: "0ms", label: "Network Latency" }, { num: "Real-time", label: "Alert System" }],
-    featured: true, category: "ai", done: true, github: "#", demo: "#",
-  },
-  {
-    title: "Cryptocurrency Price Forecasting Platform",
-    badge: "ML / Time-Series", badgeColor: "text-purple-400 bg-purple-400/10 border-purple-400/30",
-    desc: "ML-powered platform forecasting crypto prices using LSTM and regression models with a Flask API and live chart visualizations. Built during Infosys Springboard Internship.",
-    tech: ["Python", "LSTM", "Scikit-learn", "Flask", "Pandas", "Matplotlib"],
+    title: "LLM-Powered Agentic Code Review Assistant",
+    badge: "AI / LLM", badgeColor: "text-purple-400 bg-purple-400/10 border-purple-400/30",
+    desc: "Developed an AI-powered code review system using LangChain and Gemini API with a multi-agent workflow for syntax, security, and style-review.",
+    tech: ["Python", "LangChain", "Streamlit", "Gemini API"],
     category: "ai", done: true, github: "#",
   },
   {
-    title: "AI-Based Job Aligner",
-    badge: "NLP / AI Tool", badgeColor: "text-emerald-400 bg-emerald-400/10 border-emerald-400/30",
-    desc: "NLP tool that parses job descriptions and optimizes resume keyword matching for ATS systems. Identifies skill gaps and improves candidate shortlist rates.",
-    tech: ["Python", "NLP", "Machine Learning", "Flask"],
-    category: "ai", done: true, github: "#", demo: "#",
-  },
-  {
-    title: "E-Commerce MERN Platform",
-    badge: "Full Stack", badgeColor: "text-cyan-400 bg-cyan-400/10 border-cyan-400/30",
-    desc: "Full-stack e-commerce app with JWT auth, product & inventory management, Stripe payment integration, and a responsive admin dashboard.",
-    tech: ["React.js", "Node.js", "MongoDB", "Express.js", "JWT", "Stripe"],
-    category: "web", done: true, github: "#", demo: "#",
-  },
-  {
-    title: "Children's Therapy Center Website",
-    badge: "Full Stack", badgeColor: "text-cyan-400 bg-cyan-400/10 border-cyan-400/30",
-    desc: "Interactive booking platform for parents and therapists — appointment scheduling, session detail pages, and a clean UI built with EJS and Node.js backend.",
-    tech: ["Node.js", "EJS", "MongoDB", "Express.js", "HTML/CSS"],
+    title: "Domain Threat Scanner REST API",
+    badge: "Backend / Security", badgeColor: "text-purple-400 bg-purple-400/10 border-purple-400/30",
+    desc: "Built a RESTful threat intelligence API integrating VirusTotal and URLScan.io. Aggregates indicators, generates risk scores, and returns structured JSON reports.",
+    tech: ["Node.js", "Express.js", "VirusTotal API", "URLScan.io"],
     category: "web", done: true, github: "#",
   },
-  // ── PLANNED ──
   {
-    title: "Real-Time Chat Application",
+    title: "E-Commerce Platform",
     badge: "Full Stack", badgeColor: "text-cyan-400 bg-cyan-400/10 border-cyan-400/30",
-    desc: "Live chat app with Socket.io for real-time messaging, room-based conversations, user authentication, and online presence indicators.",
-    tech: ["React.js", "Node.js", "Socket.io", "Express.js", "MongoDB"],
-    category: "web", done: false, github: "#",
+    desc: "Developed a full-stack e-commerce application with JWT-based authentication, product management, shopping cart functionality, and order processing.",
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB"],
+    category: "web", done: true, github: "#",
   },
   {
-    title: "Dev Portfolio CMS",
-    badge: "Full Stack", badgeColor: "text-cyan-400 bg-cyan-400/10 border-cyan-400/30",
-    desc: "A headless CMS-backed portfolio builder where developers can manage projects, blogs, and contact entries from an admin dashboard without touching code.",
-    tech: ["Next.js", "Sanity CMS", "Tailwind CSS", "Vercel"],
-    category: "web", done: false, github: "#",
-  },
-  {
-    title: "Sentiment Analysis Dashboard",
-    badge: "AI / NLP", badgeColor: "text-purple-400 bg-purple-400/10 border-purple-400/30",
-    desc: "Analyzes social media/review sentiment using fine-tuned BERT. Visualizes trends over time with charts and word clouds via a FastAPI + React frontend.",
-    tech: ["Python", "BERT", "FastAPI", "React.js", "Recharts"],
-    category: "ai", done: false, github: "#",
-  },
-  {
-    title: "Face Attendance System",
-    badge: "Computer Vision", badgeColor: "text-emerald-400 bg-emerald-400/10 border-emerald-400/30",
-    desc: "Automated attendance marking using facial recognition with DeepFace. Stores records in MongoDB, generates reports, and flags unknown faces in real time.",
-    tech: ["Python", "DeepFace", "OpenCV", "MongoDB", "Flask"],
-    category: "ai", done: false, github: "#",
-  },
-  {
-    title: "SportsEdge Event Hub — UI/UX",
-    badge: "UI/UX Design", badgeColor: "text-pink-400 bg-pink-400/10 border-pink-400/30",
-    desc: "End-to-end Figma design for a college sports event management platform — registration flows, leaderboards, mobile-first layouts, and a full design system.",
-    tech: ["Figma", "Prototyping", "Design System", "Mobile-first"],
-    category: "uiux", done: false, github: "#", demo: "#",
-  },
-  {
-    title: "AI Therapy Companion — UX Design",
-    badge: "UI/UX Design", badgeColor: "text-pink-400 bg-pink-400/10 border-pink-400/30",
-    desc: "High-fidelity Figma prototype for a mental health companion — mood tracking, guided journaling, calm UI interactions, and an empathetic onboarding flow.",
-    tech: ["Figma", "Interaction Design", "User Research", "Prototyping"],
-    category: "uiux", done: false, github: "#", demo: "#",
-  },
-  {
-    title: "Dev Tools Dashboard — UI Design",
-    badge: "UI/UX Design", badgeColor: "text-pink-400 bg-pink-400/10 border-pink-400/30",
-    desc: "Dark-mode developer dashboard UI with sidebar navigation, code snippet manager, API tester mockup, and notification system — designed entirely in Figma.",
-    tech: ["Figma", "Dark Mode Design", "Component Library", "Auto-layout"],
-    category: "uiux", done: false, github: "#",
+    title: "AI-Powered Real-Time Malpractice Detection",
+    badge: "⭐ SIH — Institute Selected", badgeColor: "text-amber-400 bg-amber-400/10 border-amber-400/30",
+    desc: "Developed a real-time computer vision system capable of detecting suspicious examination behavior using object detection and human pose estimation techniques.",
+    tech: ["Python", "YOLOv8", "OpenCV", "MediaPipe"],
+    featured: true, category: "ai", done: true, github: "#", demo: "#",
   },
 ];
 
 const EXPERIENCE = [
-
-   {
+  {
     company: "NIT Calicut",
-    role: "ML Research Intern ",
-    date: "May 2026 - Present",
+    role: "Machine Learning Research Intern",
+    date: "05/2026 - Present",
     color: "#f59e0b",
     bullets: [
-      "•Researching AI-driven code smell detection and automated refactoring techniques for software quality improvement.",
+      "Researching AI-driven code smell detection and automated refactoring techniques for software quality improvement.",
       "Developing multi-view deep learning models using GraphCodeBERT, ASTs, and GNNs for code analysis.",
       "Evaluating transformer-based refactoring models using syntax, semantic similarity, and code quality metrics.",
     ],
   },
   {
     company: "Infosys Springboard",
-    role: "AI / ML Intern — Internship 6.0",
-    date: "Sep 2025 – Nov 2025",
+    role: "ML Engineer Intern — Crypto Price Forecasting",
+    date: "09/2025 – 11/2025",
     color: "#00d4ff",
     bullets: [
-      "Designed and trained <b>LSTM and regression models</b> to forecast cryptocurrency prices using historical OHLCV data.",
-      "Built a <b>Flask API layer</b> to serve model predictions with a React frontend for real-time Matplotlib chart visualizations.",
-      "Feature-engineered <b>large time-series datasets</b> using Pandas and NumPy, applying sliding window techniques for sequence modeling.",
-    ],
-  },
-  {
-    company: "ApexPlanet Software Pvt. Ltd.",
-    role: "Web Development Intern",
-    date: "May 2025 – Jul 2025",
-    color: "#7c3aed",
-    bullets: [
-      "Developed and shipped <b>full-stack web features</b> using the MERN stack with proper version control and code review practices.",
-      "Built <b>RESTful API endpoints</b> with Node.js and Express.js — authentication, data validation, and error handling.",
-      "Delivered features on schedule in an <b>Agile sprint environment</b>, collaborating with a cross-functional team.",
+      "Developed LSTM and regression-based models for cryptocurrency price forecasting using Python and machine learning techniques.",
+      "Performed data preprocessing, feature engineering, and model evaluation using MAE and RMSE metrics.",
+      "Built a Flask-based application for real-time prediction and market trend visualization.",
     ],
   },
   {
     company: "Spotmies LLP",
     role: "React Developer Intern",
-    date: "May 2025 – Jun 2025",
+    date: "05/2025 – 06/2025",
     color: "#10b981",
     bullets: [
-      "Built <b>responsive React components</b> and improved UX flows, reducing user drop-off on key screens.",
-      "Worked with <b>state management and React Hooks</b> for dynamic data, contributing to a cleaner component architecture.",
-    ],
-  },
-  {
-    company: "Cognifyz Technologies",
-    role: "Web Development Intern",
-    date: "Mar 2025 – Apr 2025",
-    color: "#f59e0b",
-    bullets: [
-      "Completed <b>structured web development tasks</b> covering frontend and backend fundamentals through weekly deliverables.",
-      "Built and shipped <b>mini projects</b> using HTML, CSS, JavaScript, and Node.js as part of the internship curriculum.",
+      "Developed reusable React.js components and responsive user interfaces for REAIDY, an AI-powered recruitment platform.",
+      "Debugged frontend issues, optimized performance, and improved user experience through code splitting and lazy loading.",
+      "Collaborated with cross-functional teams to integrate frontend features with backend APIs and deliver scalable solutions."
     ],
   },
 ];
@@ -204,10 +123,10 @@ const CERTS_PLANNED = [
 ];
 
 const SKILLS = [
-  { label: "Frontend", color: "text-cyan-400", tags: ["React.js", "JavaScript", "HTML5", "CSS3", "EJS"] },
+  { label: "Languages", color: "text-rose-400", tags: ["Python", "Java", "C", "JavaScript"] },
+  { label: "Frontend", color: "text-cyan-400", tags: ["React.js", "HTML5", "CSS3", "JavaScript"] },
   { label: "Backend", color: "text-purple-400", tags: ["Node.js", "Express.js", "Flask", "REST APIs"] },
-  { label: "AI / ML", color: "text-emerald-400", tags: ["Python", "YOLOv8", "OpenCV", "Scikit-learn", "LSTM", "NLP", "MediaPipe"] },
-  { label: "Core CS", color: "text-amber-400", tags: ["DSA", "OOP", "MongoDB", "SQL", "Git", "C / Java"] },
+  { label: "AI & ML", color: "text-emerald-400", tags: ["Scikit-learn", "PyTorch", "LangChain", "Gemini API"] },
 ];
 
 /* ─────────────────────────────────────────
@@ -362,18 +281,34 @@ export default function App() {
 
     setSending(true);
     try {
-      await fetch("http://localhost:5000/api/contact", {
+      // Use the actual API backend URL from env, or default to the backend server
+      const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
+      const response = await fetch(`${apiUrl}/api/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
-      toast.success("Message sent successfully 🚀");
-      setSent(true);
-      setForm({ name: "", email: "", subject: "", message: "" });
-      setErrors({});
-      setTimeout(() => setSent(false), 3000);
+      
+      const data = await response.json();
+      
+      if (response.ok && data.success) {
+        toast.success("Message sent successfully 🚀");
+        setSent(true);
+        setForm({ name: "", email: "", subject: "", message: "" });
+        setErrors({});
+        setTimeout(() => setSent(false), 3000);
+      } else {
+        if (typeof data.error === 'object') {
+          // Backend returned validation errors object
+          setErrors(data.error);
+          toast.error("Please fix the highlighted errors.");
+        } else {
+          // Backend returned a string error
+          toast.error(data.error || "Failed to send message.");
+        }
+      }
     } catch {
-      toast.error("Something went wrong. Try again.");
+      toast.error("Something went wrong. Is the server running?");
     } finally {
       setSending(false);
     }
@@ -844,12 +779,14 @@ export default function App() {
 
             <div className="grid md:grid-cols-3 gap-4">
               {[
-                { label: "Frontend", color: "text-cyan-400", tags: ["React.js", "JavaScript", "Tailwind", "HTML5", "CSS3"] },
-                { label: "Backend", color: "text-purple-400", tags: ["Node.js", "Express.js", "REST APIs", "Flask"] },
-                { label: "Database", color: "text-amber-400", tags: ["MongoDB", "MySQL", "Mongoose"] },
-                { label: "AI / ML", color: "text-emerald-400", tags: ["Python", "YOLOv8", "OpenCV", "Scikit-learn", "LSTM", "NLP", "MediaPipe", "Pandas", "NumPy"] },
-                { label: "Tools", color: "text-gray-300", tags: ["Git", "GitHub", "VS Code", "Postman", "XAMPP", "Google Colab"] },
-                { label: "Core CS", color: "text-rose-400", tags: ["DSA", "OOP", "DBMS", "OS", "C", "Java"] },
+                { label: "Languages", color: "text-rose-400", tags: ["Python", "Java", "C", "JavaScript"] },
+                { label: "DSA", color: "text-orange-400", tags: ["Dynamic Programming", "Greedy Algorithms", "Sliding Window", "Binary Search"] },
+                { label: "Backend", color: "text-purple-400", tags: ["Node.js", "Express.js", "Flask", "REST APIs", "JWT", "Rate Limiting"] },
+                { label: "Frontend", color: "text-cyan-400", tags: ["React.js", "HTML5", "CSS3", "JavaScript"] },
+                { label: "Databases", color: "text-amber-400", tags: ["MySQL", "PostgreSQL", "MongoDB"] },
+                { label: "AI & ML", color: "text-emerald-400", tags: ["Scikit-learn", "PyTorch", "LangChain", "Gemini API", "OpenCV", "YOLOv8", "MediaPipe", "Pandas", "NumPy"] },
+                { label: "DevOps & Cloud", color: "text-blue-400", tags: ["Git", "GitHub", "Docker", "GitHub Actions", "AWS"] },
+                { label: "Core & Systems", color: "text-gray-300", tags: ["OOP", "DBMS", "OS", "CN", "System Design", "Scalability"] },
               ].map((cat) => (
                 <motion.div
                   key={cat.label}
