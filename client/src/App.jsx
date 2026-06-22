@@ -123,6 +123,18 @@ const PROJECTS = [
 ];
 
 const EXPERIENCE = [
+
+   {
+    company: "NIT Calicut",
+    role: "ML Research Intern ",
+    date: "May 2026 - Present",
+    color: "#f59e0b",
+    bullets: [
+      "•Researching AI-driven code smell detection and automated refactoring techniques for software quality improvement.",
+      "Developing multi-view deep learning models using GraphCodeBERT, ASTs, and GNNs for code analysis.",
+      "Evaluating transformer-based refactoring models using syntax, semantic similarity, and code quality metrics.",
+    ],
+  },
   {
     company: "Infosys Springboard",
     role: "AI / ML Intern — Internship 6.0",
